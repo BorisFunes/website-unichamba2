@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Unichamba 2.0</title>
+  </head>
+
+  <body>
+    <button id="menu-toggle">&#9776;</button>
+    <div id="nav-links">
+      <a id="simple" href="/unichamba.html">
+        <img
+          src="rcs/banner-unichamba.png"
+          alt="Logo Unichamba"
+          width="120"
+          height="60"
+        />
+      </a>
+      <a href="https://unichamba2.netlify.app">Versión Web</a>
+      <!-- Falta el enlace a la Play Store -->
+      <a href="">Descarga Nuestra App</a>
+      <a href="#inicio" onclick="ocultarGaleria()">Inicio</a>
+      <a href="#descubrenos" onclick="ocultarGaleria()">Descúbrenos</a>
+      <a href="#sobre-nosotros" onclick="ocultarGaleria()">Sobre Nosotros</a>
+    </div>
+
+    <header>
+      <h1>Conectando talento universitario</h1>
+      <h1>con oportunidades laborales</h1>
+    </header>
+
+    <div id="galeria">
+      <img src="rcs/principal1.png" alt="Imagen 1" />
+      <img src="rcs/principal2.png" alt="Imagen 2" />
+      <img src="rcs/principal3.png" alt="Imagen 3" />
+    </div>
+
+    <section id="inicio">
+      <h2>Tu puente hacia el mundo laboral</h2>
+      <h3>La plataforma que necesitas para empezar tu carrera</h3>
+      <div class="app-presentation">
+        <img
+          src="rcs/captura1.png"
+          alt="Pantalla principal de Unichamba"
+          id="rotating-image"
+        />
+        <p>
+          Unichamba es la solución perfecta para estudiantes universitarios que
+          buscan su primer empleo o prácticas profesionales. Conectamos a los
+          mejores talentos con empresas que valoran la innovación y el
+          potencial.
+        </p>
+        <p>
+          Nuestra plataforma inteligente analiza tu perfil académico y
+          habilidades para recomendarte las oportunidades que mejor se adapten a
+          ti.
+        </p>
+      </div>
+    </section>
+
+    <section id="descubrenos">
+      <h2>¿Por qué elegir Unichamba?</h2>
+      <h3>Descubre las características que nos hacen únicos</h3>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Perfil inteligente</h3>
+          <p>
+            Crea un perfil que destaque tus habilidades académicas y
+            extracurriculares de manera profesional.
+          </p>
+          <img src="rcs/perfil.png" alt="Perfil inteligente" />
+        </div>
+        <div class="feature">
+          <h3>Conexiones directas</h3>
+          <p>
+            Comunícate directamente con reclutadores de las mejores empresas sin
+            intermediarios.
+          </p>
+          <img src="rcs/conexiones.png" alt="Conexiones directas" />
+        </div>
+        <div class="feature">
+          <h3>Oportunidades personalizadas</h3>
+          <p>
+            Recibe recomendaciones de empleo basadas en tu carrera, habilidades
+            e intereses.
+          </p>
+          <img src="rcs/oportunidades.png" alt="Oportunidades personalizadas" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion para cada uno de Nosotros -->
+    <section id="sobre-nosotros">
+      <h2>Nuestro equipo</h2>
+      <h3>Conoce a las mentes detrás de Unichamba</h3>
+      <div class="container">
+        <div class="developer-card">
+          <img src="rcs/ingCalderon.jpg" alt="Catedratico encargado" />
+          <h3>Alexander Calderon</h3>
+          <h4>Catedratico de la UES FMOCC</h4>
+        </div>
+        <div class="description">
+          <p>
+            Presentamos la nueva version de la innovadora aplicacion de
+            Unichamba desarrollada por estudiantes de la Universidad de El
+            Salvador Fmocc, con este cambio buscamos traer mejoras en el
+            apartado visual, mejorar la funcionalidad y el desarrollo artistico.
+          </p>
+          <p>
+            Unichamba 2.0 desarrollada en ReactNative con tecnologia Expo, e
+            implementada tanto en Web como Movil, busca lograr conexiones entre
+            jovenes que buscan una oportunidad laboral real y aquellas empresas
+            que estan dispuestas a brindarselas. Unichamba busca ser mas que una
+            simple aplicacion, busca ser la comunidad de busqueda de empleo mas
+            importante para todos aquellos que quieran la oportunidad de
+            desempeñarse y ser mejores.
+          </p>
+        </div>
+      </div>
+      <h3 style="margin-top: 30px">DESARROLLADORES</h3>
+
+      <div class="developer-info">
+        <!-- Boris Funes -->
+        <div class="developer-card">
+          <img src="rcs/Profiles/HenriFunes.jpg" alt="DEV de Unichamba" />
+          <h3>Boris Funes</h3>
+          <h4>Developer</h4>
+        </div>
+
+        <!-- Roberto Vides -->
+        <div class="developer-card">
+          <img src="rcs/Profiles/GadielVides.JPG" alt="DEV de Unichamba" />
+          <h3>Gadiel Vides</h3>
+          <h4>Developer</h4>
+        </div>
+
+        <!-- Luis Ramos -->
+        <div class="developer-card">
+          <img src="https://placehold.co/250x250" alt="DEV de Unichamba" />
+          <h3>Luis Ramos</h3>
+          <h4>Developer</h4>
+        </div>
+
+        <!-- Liliana Acevedo -->
+        <div class="developer-card">
+          <img src="rcs/Profiles/LilianaAcevedo.jpg" alt="DEV de Unichamba" />
+          <h3>Liliana Acevedo</h3>
+          <h4>Developer</h4>
+        </div>
+
+        <!-- Diego Vasquez -->
+        <div class="developer-card">
+          <img src="https://placehold.co/250x250" alt="DEV de Unichamba" />
+          <h3>Diego Vasquez</h3>
+          <h4>Developer</h4>
+        </div>
+
+        <!-- Katherine Ayala -->
+        <div class="developer-card">
+          <img src="rcs/Profiles/katherineAyala.jpg" alt="DEV de Unichamba" />
+          <h3>Katherine Ayala</h3>
+          <h4>Developer</h4>
+        </div>
+
+        <!-- Miguel Guerra -->
+        <div class="developer-card">
+          <img src="rcs/Profiles/miguelguerra.jpg" alt="DEV de Unichamba" />
+          <h3>Miguel Guerra</h3>
+          <h4>Developer</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="terminos">
+      <h2>Términos y Condiciones</h2>
+      <p>
+        Estos son los términos y condiciones estándar para el uso de
+        aplicaciones:
+      </p>
+      <ul>
+        <li>
+          El usuario acepta utilizar la aplicación de manera responsable y
+          conforme a las leyes aplicables.
+        </li>
+        <li>
+          La aplicación no se hace responsable de los daños o pérdidas derivados
+          del uso indebido de la misma.
+        </li>
+        <li>
+          El contenido de la aplicación está protegido por derechos de autor y
+          no puede ser reproducido sin permiso.
+        </li>
+        <li>
+          Nos reservamos el derecho de modificar estos términos en cualquier
+          momento sin previo aviso.
+        </li>
+        <li>
+          El uso continuado de la aplicación implica la aceptación de los
+          términos actualizados.
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025
+        <a href="#terminos" onclick="ocultarGaleria()"
+          >Unichamba. Todos los derechos reservados.</a
+        >
+      </p>
+    </footer>
+
+    <!--Javascript-->
+    <script>
+      // Rotador de imágenes simple
+      const images = [
+        "rcs/captura1.png",
+        "rcs/captura2.png",
+        "rcs/captura3.png",
+      ];
+
+      let currentImage = 0;
+      const imageElement = document.getElementById("rotating-image");
+
+      function rotateImage() {
+        currentImage = (currentImage + 1) % images.length;
+        imageElement.src = images[currentImage];
+        imageElement.alt = "Demo de funcionalidad " + (currentImage + 1);
+      }
+      // Cambiar imagen cada 3 segundos
+      setInterval(rotateImage, 3000);
+    </script>
+
+    <script>
+      function ocultarGaleria() {
+        document.getElementById("galeria").style.display = "none";
+        document.querySelector("header").style.display = "none";
+      }
+    </script>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("nav-links").classList.toggle("active");
+        });
+
+      // Capturar todos los enlaces del menú y cerrar cuando se haga clic en uno
+      document.querySelectorAll("#nav-links a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.getElementById("nav-links").classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+
+  <style>
+    /*Estilo en moviles*/
+
+    #menu-toggle {
+      display: none; /* Oculto en escritorio */
+      background: transparent;
+      border: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+
+    #nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background: rgba(31, 29, 29, 0.9);
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    #nav-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px; /* Ajusta según necesidad */
+      color: #e1d8ff;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    #nav-links a:hover {
+      background: #7f6cff;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      #menu-toggle {
+        display: block; /* Mostramos el botón */
+        z-index: 200;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(31, 29, 29, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        z-index: 100; /* Mayor prioridad para que quede encima */
+      }
+
+      #nav-links a {
+        display: block;
+        padding: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px; /* Ajusta según necesidad */
+        color: #e1d8ff;
+        text-decoration: none;
+        margin: 0 1.2rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      #nav-links.active {
+        display: flex;
+      }
+
+      #galeria {
+        display: flex; /* Activa flexbox */
+        flex-direction: column; /* Apila las imágenes */
+        align-items: center; /* Centra las imágenes horizontalmente */
+        justify-content: center; /* Centra las imágenes verticalmente si el contenedor tiene altura suficiente */
+      }
+
+      #galeria img {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 10px auto; /* Asegura que cada imagen esté centrada dentro de su contenedor */
+      }
+
+      .app-presentation {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .app-presentation img {
+        width: 100%;
+        height: auto;
+      }
+
+      .developer-info,
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature,
+      .developer-card {
+        width: 90%;
+      }
+
+      header h1 {
+        font-size: clamp(24px, 5vw, 40px);
+      }
+    }
+
+    /*Estilo para Web*/
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #2a2e2a;
+    }
+
+    header {
+      color: #e1d8ff;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: "Lato", sans-serif;
+      color: #f5daec !important;
+      font-size: 40px;
+    }
+
+    body {
+      background-image: url("rcs/fondo1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body h2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 40px;
+      color: #663d64;
+    }
+
+    body h3 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      color: #663d64;
+    }
+
+    p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 19px;
+      color: black;
+      text-align: left;
+    }
+
+    #galeria {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    #galeria img {
+      width: 250px;
+      height: 300px;
+      margin-left: 3%;
+      margin-right: 3%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+      display: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    /* Mostrar la sección activa */
+    #inicio:target,
+    #descubrenos:target,
+    #sobre-nosotros:target {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    /* Mostrar términos cuando se hace clic */
+    #terminos:target {
+      display: block;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #inicio {
+      background: rgba(252, 231, 255, 0.692);
+      border-radius: 10px;
+    }
+
+    #descubrenos {
+      background: rgba(252, 231, 255, 0.692);
+      border-radius: 10px;
+    }
+
+    #sobre-nosotros {
+      background: rgba(252, 231, 255, 0.692);
+      border-radius: 10px;
+    }
+
+    .app-presentation {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      text-align: left;
+      font-family: "Roboto", sans-serif;
+      font-size: 23;
+      color: black;
+      flex: 1;
+      text-align: left;
+    }
+
+    .app-presentation img {
+      width: 350px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .app-presentation p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 22px;
+      color: black;
+      text-align: left;
+    }
+
+    .container {
+      display: flex;
+      align-items: center; /* Alinea verticalmente */
+      gap: 20px; /* Espacio entre la tarjeta y el texto */
+    }
+
+    .description {
+      max-width: 800px; /* Ajusta el ancho máximo del texto */
+    }
+
+    .developer-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .developer-card {
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 260px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .developer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .developer-card img {
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      width: 100%; /* Ajusta el tamaño de la imagen */
+    }
+
+    footer {
+      background: rgba(31, 29, 29, 0.9);
+      color: #e1d8ff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #7f6cff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e1d8ff;
+    }
+
+    footer p {
+      font-family: "Arial", sans-serif;
+      font-size: 17px;
+      color: rgb(27, 216, 230);
+      text-align: center;
+    }
+
+    #terminos {
+      padding: 2.5rem;
+      text-align: left;
+      display: none;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    #terminos ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    #terminos li {
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature img {
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      width: 85%; /* Ajusta el tamaño de la imagen */
+    }
+
+    .feature h3 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 23px;
+      color: #000000;
+    }
+
+    .feature p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 17px;
+      color: black;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</html>
