@@ -24,24 +24,20 @@
           height="60"
         />
       </a>
-      <a href="https://unichamba2.netlify.app">Versión Web</a>
-      <!-- Falta el enlace a la Play Store -->
-      <a href="">Descarga Nuestra App</a>
-      <a href="#inicio" onclick="ocultarGaleria()">Inicio</a>
-      <a href="#descubrenos" onclick="ocultarGaleria()">Descúbrenos</a>
-      <a href="#sobre-nosotros" onclick="ocultarGaleria()">Sobre Nosotros</a>
+      <a href="https://unichamba.com/">Versión Web</a>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.unichamba&pcampaignid=web_share"
+        >Descarga Nuestra App</a
+      >
+      <a href="#inicio">Inicio</a>
+      <a href="#descubrenos">Descúbrenos</a>
+      <a href="#sobre-nosotros">Sobre Nosotros</a>
     </div>
 
     <header>
       <h1>Conectando talento universitario</h1>
       <h1>con oportunidades laborales</h1>
     </header>
-
-    <div id="galeria">
-      <img src="rcs/principal1.png" alt="Imagen 1" />
-      <img src="rcs/principal2.png" alt="Imagen 2" />
-      <img src="rcs/principal3.png" alt="Imagen 3" />
-    </div>
 
     <section id="inicio">
       <h2>Tu puente hacia el mundo laboral</h2>
@@ -159,7 +155,7 @@
 
         <!-- Diego Vasquez -->
         <div class="developer-card">
-          <img src="https://placehold.co/250x250" alt="DEV de Unichamba" />
+          <img src="rcs/Profiles/DiegoVasquez.jpg" alt="DEV de Unichamba" />
           <h3>Diego Vasquez</h3>
           <h4>Developer</h4>
         </div>
@@ -173,7 +169,7 @@
 
         <!-- Miguel Guerra -->
         <div class="developer-card">
-          <img src="rcs/Profiles/miguelguerra.jpg" alt="DEV de Unichamba" />
+          <img src="rcs/Profiles/MiguelGuerra.jpg" alt="DEV de Unichamba" />
           <h3>Miguel Guerra</h3>
           <h4>Developer</h4>
         </div>
@@ -241,13 +237,6 @@
     </script>
 
     <script>
-      function ocultarGaleria() {
-        document.getElementById("galeria").style.display = "none";
-        document.querySelector("header").style.display = "none";
-      }
-    </script>
-
-    <script>
       document
         .getElementById("menu-toggle")
         .addEventListener("click", function () {
@@ -258,6 +247,13 @@
       document.querySelectorAll("#nav-links a").forEach((link) => {
         link.addEventListener("click", function () {
           document.getElementById("nav-links").classList.remove("active");
+        });
+      });
+
+      // Función para ocultar el header cuando se hace clic en cualquier enlace del menú
+      document.querySelectorAll("#nav-links a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.querySelector("header").style.display = "none";
         });
       });
     </script>
@@ -350,20 +346,6 @@
         display: flex;
       }
 
-      #galeria {
-        display: flex; /* Activa flexbox */
-        flex-direction: column; /* Apila las imágenes */
-        align-items: center; /* Centra las imágenes horizontalmente */
-        justify-content: center; /* Centra las imágenes verticalmente si el contenedor tiene altura suficiente */
-      }
-
-      #galeria img {
-        width: 90%;
-        height: auto;
-        display: block;
-        margin: 10px auto; /* Asegura que cada imagen esté centrada dentro de su contenedor */
-      }
-
       .app-presentation {
         flex-direction: column;
         text-align: center;
@@ -409,23 +391,54 @@
       padding: 1.5rem 0;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
     }
 
     header h1 {
       font-family: "Lato", sans-serif;
       color: #f5daec !important;
       font-size: 40px;
+      margin: 0;
     }
 
     body {
-      background-image: url("rcs/fondo1.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      background: transparent;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0; /* top/right/bottom/left: 0 */
+      z-index: -1; /* queda detrás del contenido */
+      background-image: url("rcs/fondo1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 130% 150%;
+      background-position: 0% 50%; /* arranca a la izquierda, centrado en Y */
+      animation: moveBackground 40s linear infinite;
+      will-change: background-position; /* hint de rendimiento */
+      transform: translateZ(0); /* fuerza composición GPU */
+    }
+
+    @keyframes moveBackground {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
     }
 
     body h2 {
@@ -447,22 +460,6 @@
       text-align: left;
     }
 
-    #galeria {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin: 20px 0;
-    }
-
-    #galeria img {
-      width: 250px;
-      height: 300px;
-      margin-left: 3%;
-      margin-right: 3%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
     section {
       padding: 3rem 2rem;
       text-align: center;
@@ -470,6 +467,7 @@
       max-width: 1200px;
       margin: 0 auto;
       flex: 1;
+      scroll-margin-top: 85px;
     }
 
     /* Mostrar la sección activa */
